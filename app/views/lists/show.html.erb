@@ -1,2 +1,5 @@
-<%= @list.name %>
-<%= link_to "create bookmark", new_list_bookmark_path(@list.id) %>
+<ul class="show-list">
+  <li><h1><%= @list.name %></h1></li>
+  <li><%= cl_image_tag(@list.photo.key, height: 300, width: 300, crop: :thumb) %></li>
+  <li> <%= link_to "create bookmark", new_list_bookmark_path(@list.id) %> </li>
+</ul>
